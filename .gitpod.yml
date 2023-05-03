@@ -1,0 +1,15 @@
+# Let's use our custom image with doppler pre-installed
+image:
+  file: .gitpod.Dockerfile
+
+# Let's install our VSCode Extensions
+vscode: 
+  extensions:
+    - ms-python.isort
+    - ms-python.python
+    - charliermarsh.ruff
+
+# List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
+tasks:
+  - name: bash
+    command: doppler setup --no-interactive && bash <(curl https://raw.githubusercontent.com/ellie/atuin/main/install.sh) && atuin import auto && bash

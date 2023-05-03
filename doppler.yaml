@@ -1,0 +1,3 @@
+setup:
+  project: persistent-bash-example
+  config: dev
